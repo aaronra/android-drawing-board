@@ -1,0 +1,27 @@
+<head>
+  <title>app</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <div id="board">
+    <canvas id="myCanvas" width="500px" height="500px">
+      Sorry, your browser doesn't support canvas technology.
+    </canvas>
+    <p>Color picker: <select id="selectColor">
+      <option id="colBlack" value="black" selected="selected">Black</option>
+      <option id="colRed" value="red">Red</option>
+      <option id="colBlue" value="blue">Blue</option>
+      <option id="colGreen" value="green">Green</option>
+      <option id="colOrange" value="orange">Orange</option>
+      <option id="colYellow" value="yellow">Yellow</option>
+    </select>
+    </p>
+  </div><!-- END board -->
+
+</template>
