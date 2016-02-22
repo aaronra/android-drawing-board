@@ -1,5 +1,7 @@
 <head>
-  <title>app</title>
+  <title>Sketch Pad</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+
 </head>
 
 <body>
@@ -9,19 +11,36 @@
 </body>
 
 <template name="hello">
-  <div id="board">
-    <canvas id="myCanvas" width="500px" height="500px">
-      Sorry, your browser doesn't support canvas technology.
-    </canvas>
-    <p>Color picker: <select id="selectColor">
-      <option id="colBlack" value="black" selected="selected">Black</option>
-      <option id="colRed" value="red">Red</option>
-      <option id="colBlue" value="blue">Blue</option>
-      <option id="colGreen" value="green">Green</option>
-      <option id="colOrange" value="orange">Orange</option>
-      <option id="colYellow" value="yellow">Yellow</option>
-    </select>
-    </p>
-  </div><!-- END board -->
+
+  <div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+      <h3>Sketch Pad</h3>
+      <a id="new" data-role="button" data-theme="b" class="ui-btn-left">New</a>
+      <a id="etch" data-role="button" data-theme="b" class="ui-btn-right">Etch OFF</a>
+    </div>
+    <div id="content"></div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+      <div class="palette-case">
+        <div class="palette-box">
+          <div class="palette white"></div>
+        </div>
+        <div class="palette-box">
+          <div class="palette red"></div>
+        </div>
+        <div class="palette-box">
+          <div class="palette blue"></div>
+        </div>
+        <div class="palette-box">
+          <div class="palette green"></div>
+        </div>
+        <div class="palette-box">
+          <div class="palette black"></div>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+    <div id="debug" style="display:none;position:absolute;top:45px;left:1px;right:1px;height:60px;background-color:#eea"></div>
+    <div id="etchHelp">Turning <strong>Etch ON</strong> will enable drawing using the device's accelerometer by tilting the device in any direction.</div>
+  </div>
 
 </template>
